@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Countdown Targets
 const launchDate = new Date("2024-11-16T00:00:00").getTime(); // Launch date
-const websiteDate = new Date("2024-12-01T00:00:00").getTime(); // Main website release
+const websiteDate = new Date("2025-01-05T00:00:00").getTime(); // Main website release
 
 // Function to update countdowns
 function updateCountdowns() {
