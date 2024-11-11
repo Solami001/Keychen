@@ -1,3 +1,38 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = {
+        'index.html': 'home-link',
+        'about.html': 'about-link',
+        'portfolio.html': 'portfolio-link',
+        'contact.html': 'contact-link'
+    };
+
+    if (navLinks[currentPage]) {
+        document.getElementById(navLinks[currentPage]).classList.add('active');
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navbarIcon = document.getElementById('navbar-icon');
+    const menuIcon = document.getElementById('menu-icon');
+    const cancelIcon = document.getElementById('cancel-icon');
+    const sidebar = document.getElementById('sidebar');
+
+    navbarIcon.addEventListener('click', function() {
+        menuIcon.classList.toggle('hidden');
+        cancelIcon.classList.toggle('hidden');
+        sidebar.classList.toggle('hidden-sidebar');
+
+        if (menuIcon.classList.contains('hidden')) {
+            menuIcon.classList.add('animate-spin');
+        } else {
+            menuIcon.classList.remove('animate-spin');
+        }
+    });
+});
+
 // Countdown Targets
 const launchDate = new Date("2024-11-16T00:00:00").getTime(); // Launch date
 const websiteDate = new Date("2024-12-01T00:00:00").getTime(); // Main website release
